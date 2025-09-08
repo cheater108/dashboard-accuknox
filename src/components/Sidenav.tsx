@@ -1,5 +1,11 @@
+import { useSelector } from "react-redux"
+import type { RootState } from "../store/store"
 
 const Sidenav = () => {
+    const open = useSelector((state: RootState) => state.sideNavReducer.open);
+
+    if (!open) return null;
+
     return (
         <section className="fixed right-0 top-0 w-2/5 bg-white h-lvh flex flex-col">
             <div className="bg-blue-800 py-2 px-4 text-white">
