@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"name": "CSPM Executive Dashboard",
+		"widgets": [
+			{
+				"id": 1,
+				"name": "Cloud Accounts",
+				"show": true,
+				"data": [
+					{ "parameter": "Connected", "value": 2 },
+					{ "parameter": "Connected", "value": 2 }
+				]
+			},
+			{
+				"id": 2,
+				"name": "Cloud Account Risk Assessment",
+				"show": true,
+				"data": [
+					{ "parameter": "Failed", "value": 1689 },
+					{ "parameter": "Warning", "value": 681 },
+					{ "parameter": "Passes", "value": 7253 }
+				]
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "CSPM Executive Dashboard",
+		"widgets": [
+			{
+				"id": 1,
+				"name": "Cloud demos",
+				"show": true,
+				"data": [
+					{ "parameter": "Completed", "value": 2 },
+					{ "parameter": "In progress", "value": 2 }
+				]
+			},
+			{
+				"id": 2,
+				"name": "Cloud services",
+				"show": true,
+				"data": [
+					{ "parameter": "Serverless", "value": 1689 },
+					{ "parameter": "Compute", "value": 681 },
+					{ "parameter": "Containers", "value": 7253 }
+				]
+			}
+		]
+	}
+]
