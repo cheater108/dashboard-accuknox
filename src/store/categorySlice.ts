@@ -1,20 +1,20 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import sampleData from "../../utils/sampleData.json";
 
-interface Widgets {
-	id: number;
-	name: string;
-	show: boolean;
-	data: { parameter: string; value: number }[];
+export interface Widgets {
+	id?: number;
+	name?: string;
+	show?: boolean;
+	data?: { parameter: string; value: number }[];
 }
 
-interface Category {
+export interface ICategory {
 	id: number;
 	name: string;
 	widgets: Widgets[];
 }
 
-const initialState: Category[] = sampleData;
+const initialState: ICategory[] = sampleData;
 
 const categoriesSlice = createSlice({
 	name: "categories",
