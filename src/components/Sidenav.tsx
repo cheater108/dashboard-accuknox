@@ -16,7 +16,7 @@ const Sidenav = () => {
             <div className="flex-1"></div>
             <div className="flex flex-row-reverse gap-2 py-2 px-4">
                 <button className="border-blue-800 border-[1.5px] px-4 py-1 text-blue-800 rounded-md cursor-pointer" onClick={() => dispatch(toogleSideNav())}>Cancel</button>
-                <button className="bg-blue-800 text-white px-4 py-1 rounded-md">Confirm</button>
+                <button className="bg-blue-800 text-white px-4 py-1 rounded-md cursor-pointer" onClick={() => dispatch(toogleSideNav())}>Confirm</button>
             </div>
         </section>
     )
