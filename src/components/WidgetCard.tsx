@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import { toogleSideNav } from "../store/sidenavSlice";
 import type { Widgets } from "../store/categorySlice";
-import sample_img from "../../public/sample_chart.jpeg";
 import { Plus, X } from "lucide-react";
 import { useState } from "react";
 
@@ -28,7 +27,7 @@ const WidgetCard = ({ name, data, show }: Widgets) => {
         >
             <p className="font-semibold">{name}</p>
             <div className="mt-2 flex items-center gap-8">
-                <img width={150} src={sample_img} alt="" />
+                <img width={150} src="/sample_chart.jpeg" alt="smaple chart" />
                 <div>
                     {data?.map((d, ind) => (
                         <p key={ind} className="text-sm">{d.parameter} - {d.value}</p>

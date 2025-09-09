@@ -2,12 +2,7 @@ import WidgetCard from "./WidgetCard"
 import type { ICategory } from "../store/categorySlice";
 
 const Category = ({ category }: { category: ICategory }) => {
-	const widgets = [...category.widgets];
-	if (widgets.length < 3) {
-		console.log(widgets.length);
-		while (widgets.length < 3) widgets.push({});
-		console.log("final", widgets.length)
-	}
+	const widgets = category.widgets.length < 3 ? [...category.widgets, {}, {}, {}].slice(0, 3) : [...category.widgets];
 
 	return (
 		<div className="px-4 bg-neutral-200 pb-4 pt-1 rounded-2xl mx-2">
