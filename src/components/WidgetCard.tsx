@@ -1,14 +1,21 @@
 import { useDispatch } from "react-redux";
 import { toogleSideNav } from "../store/sidenavSlice";
-import type { Widgets } from "../store/categorySlice";
+import { showWidget, type Widgets } from "../store/categorySlice";
 import { Plus, X } from "lucide-react";
 import { useState } from "react";
 
 
 
-const WidgetCard = ({ name, data, show }: Widgets) => {
+const WidgetCard = ({ name, data, show, id, categoryId }: Widgets & { categoryId: number }) => {
     const dispatch = useDispatch();
     const [hover, setHover] = useState(false);
+
+
+    const handleHide = () => {
+        if (!id) return;
+        dispatch(showWidget({ widgetId: id, show: false, id: categoryId }))
+    }
+
 
     if ((!name && !data) || !show) {
         return (
@@ -34,7 +41,7 @@ const WidgetCard = ({ name, data, show }: Widgets) => {
                     ))}
                 </div>
             </div>
-            {hover && <X size={20} className="absolute top-2 right-2 cursor-pointer" />}
+            {hover && <X size={20} className="absolute top-2 right-2 cursor-pointer" onClick={handleHide} />}
         </div>
     )
 }
